@@ -1,0 +1,7 @@
+[processors]
+diffusion_model = "sd15-turbo"
+steps = 4
+upscale_factor = 1
+
+[output]
+resolution = [1920, 1080]
