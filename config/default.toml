@@ -1,0 +1,28 @@
+[studio]
+name = "ai-wallpaper-studio"
+version = "0.6.2"
+log_level = "info"
+workers = 2
+
+[ingest]
+prompt_file = "prompts/daily.txt"
+reference_dir = "refs/"
+seed = -1
+
+[processors]
+chain = ["prompt_expand", "diffusion", "upscale", "color_grade"]
+diffusion_model = "sdxl-turbo"
+steps = 6
+guidance = 1.5
+upscale_factor = 2
+
+[output]
+driver = "file"
+target_dir = "out/"
+format = "png"
+resolution = [3840, 2160]
+set_as_wallpaper = false
+
+[telemetry]
+enabled = false
+endpoint = ""
