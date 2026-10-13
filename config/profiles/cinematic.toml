@@ -1,0 +1,8 @@
+[processors]
+chain = ["prompt_expand", "diffusion", "upscale", "color_grade", "film_grain"]
+steps = 24
+guidance = 4.0
+upscale_factor = 4
+
+[output]
+resolution = [7680, 4320]
